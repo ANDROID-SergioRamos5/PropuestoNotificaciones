@@ -11,6 +11,8 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.BitmapDrawable;
+import android.media.RingtoneManager;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
@@ -60,12 +62,17 @@ public class MainActivity extends AppCompatActivity implements  View.OnClickList
                 notificacion.setWhen(System.currentTimeMillis());
                 notificacion.setAutoCancel(true);
 
+                Uri defaultSound = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
+                notificacion.setSound(defaultSound);
+
                 Intent intent = new Intent(MainActivity.this, MainActivity.class);
                 PendingIntent pendingIntent = PendingIntent.getActivity(MainActivity.this, 0 , intent,0);
                 notificacion.setContentIntent(pendingIntent);
 
                 NotificationManager nm = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
                 nm.notify(1, notificacion.build());
+
+
 
                 break;
             }
@@ -95,6 +102,10 @@ public class MainActivity extends AppCompatActivity implements  View.OnClickList
                 Intent intent = new Intent(MainActivity.this, MainActivity.class);
                 PendingIntent pendingIntent = PendingIntent.getActivity(MainActivity.this, 0 , intent,0);
                 notificacion.setContentIntent(pendingIntent);
+
+                Uri uri = Uri.parse("http://www.marca.com");
+                Intent intentWeb = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(intentWeb);
                 break;
             }
             case R.id.boton_bigPicture:
