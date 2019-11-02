@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">PropuestoNotificaciones</string>
+    <string name="botonBigText">BIG TEXT</string>
+    <string name="channel">canalNotificacion</string>
+    <string name="descripcion">Notificaciones</string>
+    <string name="textobigText">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Vestibulum bibendum dignissim viverra. Phasellus pellentesque felis sodales dapibus rhoncus.
+        Aenean convallis mollis eros, viverra aliquam massa auctor eu. Curabitur pellentesque erat.</string>
+</resources>

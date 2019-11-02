@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="50dp"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/boton_normal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="NORMAL"
+        android:padding="30dp"/>
+
+    <Button
+        android:id="@+id/boton_bigText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/boton_normal"
+        android:hint="@string/botonBigText"
+        android:padding="30dp"/>
+
+    <Button
+        android:id="@+id/boton_bigPicture"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/boton_bigText"
+        android:hint="BIG PICTURE"
+        android:padding="30dp"/>
+
+    <Button
+        android:id="@+id/boton_Inbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/boton_bigPicture"
+        android:hint="INBOX"
+        android:padding="30dp"/>
+
+    <Button
+        android:id="@+id/boton_Botones"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/boton_Inbox"
+        android:hint="BOTONES"
+        android:padding="30dp"/>
+</RelativeLayout>
